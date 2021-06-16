@@ -1,0 +1,38 @@
+$primaryColor: #092142; //rgb(9, 33, 66);
+$secondaryColor: #fe4d5a; // rgb(254,77,90);
+$bgColor : #061d39; // rgb(6,29,57)
+$color1: #142538;//rgb(20, 37, 56)
+$color2: #1f2f41; //rgb(31, 47, 65);
+$color3: #2b3a4b; //rgb(43, 58, 75);
+$color4: #364454;//rgb(54, 68, 84);
+$color5: #48525e;//rgb(72, 82, 94);
+
+@mixin flexContainer($justify : center, $align: center, $dir:row) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $dir
+}
+
+.app {
+    // background-image: linear-gradient(to bottom, $color1, $color5);
+    background-color:$color1;
+    width: 100%;
+    height: 300vh;
+    color: #fff;
+}
+
+.navbar {
+    height: 50px;
+    @include flexContainer(flex-end, space-around, row);
+    background-color: transparent !important;
+    & > * {
+        color: #fff;
+    }
+}
+
+.navbar-brand {
+    font-size: 2.4rem;
+    font-weight: 300;
+    color: #fff !important;
+}
